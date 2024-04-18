@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div> 
+    <p> CLic the button to display a date after changing.</p>
+    <button  onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+</div>
+<div>
+    <a href="#" class="button" id="fourway">
+        Event Listener
+    </a>
+</div>
+    <script>
+        function myFunction(){
+            var t = new Date();
+            t.setHours(5);
+            document.getElementById("demo").innerHTML= t;
+        }
+
+        const fourway = document.getElementById('fourway');
+        const checkEvent = () =>{
+            alert('hum dekh rhe event object');
+            console.log(event.target);
+            console.log(event);
+            console.log(event.type);
+        }
+        fourway.addEventListener('click',checkEvent);
+    </script>
+</body>
+</html>

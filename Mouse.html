@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse</title>
+  </head>
+  <body>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUP()">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
+      praesentium in ab id quia cumque fuga labore quasi, vitae modi, assumenda
+      suscipit commodi! Magnam dolorum repellat dolor asperiores laudantium!
+      Pariatur?
+    </p>
+    <!--  Input Events -->
+    <div>
+      <p> User can select any type of key button on keyboard</p>
+      <br>
+       <input class="key1" onkeypress="keypress()" onkeydown="keydown()" onkeyup="keyup()">
+       <br/>
+       <p id="key" ></p>
+    </div>
+  </body>
+  <script>
+    function mouseDown(){
+        document.getElementById("myP").style.color="red";
+    
+    }
+    function mouseUP(){
+    document.getElementById("myP").style.color="blue";
+    }
+    // Input Events
+    const keypress = () =>{
+      document.getElementById('key').innerHTML = `you press ${event.key} and it code is ${event.code}`;
+    }
+
+  </script>
+</html>

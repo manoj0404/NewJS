@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <P>Hello i am manoj</P>
+    <a href="#" class="new " onclick="alert('hello manoj')">simple alert message</a>
+    <button class="button" onclick="fun1()">click</button>
+</body>
+<script>
+    // function fun1(){
+    //    alert("hello manoj");
+    // }
+    const fourtway = document.getElementsByClassName('new');
+    const checkEvent = () =>{
+        alert('Hello manoj');
+        console.log(event);
+        // console.log(event.target);
+        // console.log(event.type);
+
+    }
+   fourtway.addEventListener('click',checkEvent());
+</script>
+</html>
+
